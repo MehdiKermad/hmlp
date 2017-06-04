@@ -1,15 +1,44 @@
 <div id="homeMainDiv" class="container-fluid">
-  <div class="well col-md-4 text-center">
-    <p>Find previous transactions next to you</p>
+  <div class="col-md-offset-2 col-md-8 text-center">
+    
+    <div class="panel panel-primary">
 
-    <span>Position</span>
-    <p id="test"></p>
+      <div class="panel-heading">
+        <%= image_tag("logo.png", :alt => "Homeloop") %>
+      </div>
 
-    <%= form_tag "/results", method: "post" do %>
-      <input type="text" name="email"/>
-      <input type="hidden" name="lat" value="0"/>
-      <input type="hidden" name="lng" value="0"/>
-      <input type="submit" value="Go !"/>
-    <% end %>
+      <div class="panel-default container-fluid">
+      
+        <h4>Find previous transactions next to you</h4>
+
+        <p id="geoInfo" style="display:none;"></p>
+
+        <%= form_tag "/results", method: "post", class: "form-inline" do %>
+          <div class="form-group">
+            <input id="latInput" type="hidden" name="lat" value="0"/>
+            <input id="lngInput" type="hidden" name="lng" value="0"/>
+            <div class="input-group">
+              <input name="email" type="text" class="form-control">
+              <div class="input-group-addon">@homeloop.fr</div>
+            </div>
+          </div>
+          <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-map-marker">Find</button>
+        <% end %>
+
+        <div class="row">
+          <div class="col-md-6 text-right">
+            <h4>A beautiful tool ...</h4>
+            <p>This tool is offered to you by the tech team.</p>
+            <p>We really love you, therefore we made it extremelly simple to use. Or at least we hope it is. We do really expect you to provide us a feedback on this tool. And here I would continue with the explanation</p>
+          </div>
+          <div class="col-md-6 text-left">
+            <h4>... for a wonderful team</h4>
+            <p>Actually, the only ones who are reading this are candidates for a developer job at Homeloop.</p>
+            <p> I sincerelly wish you good luck, this company is amazing, I strongly believe it is the future of real estate. And if you are reading this, it means that you want to be part of this adventure.</p>
+            <p> Hope to see you soon!</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

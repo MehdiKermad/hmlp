@@ -6,7 +6,7 @@ $(document).ready ->
 
   # on vérifie que l'on est dans la bonne page
   if $("#homeMainDiv").length>0
-    x = $("#test");
+    x = $("#geoInfo");
 
     getLocation = ->
       if navigator.geolocation
@@ -15,7 +15,8 @@ $(document).ready ->
         x.html("Geolocation is not supported by this browser.");
 
     showPosition = (position) ->
-      x.html("Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude)
+      $("#latInput").val(position.coords.latitude)
+      $("#lngInput").val(position.coords.longitude)
 
     showError = (error) ->
       switch error.code

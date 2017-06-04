@@ -1,3 +1,60 @@
-<h1>Pages#results</h1>
-<p>Find me in app/views/pages/results.html.erb</p>
-<p><%= @variable %></p>
+<div id="resultsMainDiv" class="container-fluid">
+  <div class="col-md-offset-2 col-md-8 text-center">
+    
+    <div class="panel panel-primary">
+
+      <div class="panel-heading">
+        <%= image_tag("logo.png", :alt => "Homeloop") %>
+      </div>
+
+      <div class="panel-default container-fluid">
+
+      <h4>Results</h4>
+
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table table-bordered col-md-6">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Price</th>
+                <th>Area (m2)</th>
+                <th>Rooms</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ID</td>
+                <td>Price</td>
+                <td>Area (m2)</td>
+                <td>Rooms</td>
+                <td>Date</td>
+              </tr>
+              <tr>
+                <td>ID</td>
+                <td>Price</td>
+                <td>Area (m2)</td>
+                <td>Rooms</td>
+                <td>Date</td>
+              </tr>
+              <tr>
+                <td>ID</td>
+                <td>Price</td>
+                <td>Area (m2)</td>
+                <td>Rooms</td>
+                <td>Date</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-6">
+          <p>Google Maps</p>
+        </div>
+      </div>
+
+      <%= button_to "Search again", home_path, method: :get, class: "btn btn-default" %>
+    </div>
+  </div>
+</div>

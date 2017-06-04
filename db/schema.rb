@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170603181152) do
+ActiveRecord::Schema.define(version: 20170604141958) do
 
   create_table "queries", force: :cascade do |t|
     t.string "email"
     t.float "lat"
     t.float "lng"
     t.integer "result_count"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.float "lat"
+    t.float "lng"
+    t.integer "price"
+    t.integer "area"
+    t.integer "rooms"
+    t.datetime "date"
   end
 
 end

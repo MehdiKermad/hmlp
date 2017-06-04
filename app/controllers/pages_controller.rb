@@ -21,9 +21,10 @@ class PagesController < ApplicationController
       #        ) * 6371
 
       # on effectue la recherche sur 1 km
-      #Query.where("lat > 1")
+      #occurences = Query.where :lat => params[:lat], :lng => params[:lng], :with => {:geodist => 0.0..1_000.0}
 
       occurences = [1, 2, 3, 4]
+
 
       # une fois les occurences récupérées, on enregistre la requete dans la table Query
       query = Query.new
