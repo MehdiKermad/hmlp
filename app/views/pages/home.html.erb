@@ -1,0 +1,15 @@
+<div id="homeMainDiv" class="container-fluid">
+  <div class="well col-md-4 text-center">
+    <p>Find previous transactions next to you</p>
+
+    <span>Position</span>
+    <p id="test"></p>
+
+    <%= form_tag "/results", method: "post" do %>
+      <input type="text" name="email"/>
+      <input type="hidden" name="lat" value="0"/>
+      <input type="hidden" name="lng" value="0"/>
+      <input type="submit" value="Go !"/>
+    <% end %>
+  </div>
+</div>
