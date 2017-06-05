@@ -3,5 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  if $("#resultsMainDiv")>0
-    alert("resultsMainDiv")
+  if $("#resultsMainDiv").length>0
+    handler = Gmaps.build('Google')
+    handler.buildMap({ provider: {}, internal: {id: 'mapHolder'}}, ->
+      markers = handler.addMarkers(eval($("#markersList").text()))
+      handler.bounds.extendWith(markers)
+      handler.fitMapToBounds()
+    );

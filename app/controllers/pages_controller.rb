@@ -7,7 +7,8 @@ class PagesController < ApplicationController
     
     # on vérifie que l'on dispose de toute les données
     if(params[:email].blank? || params[:lat].nil? || params[:lng].nil?)
-      redirect_to "/home"
+      #redirect_to "/home"
+      @occurences = Transaction.all
     else
 
       # on calcul le rayon (radius)
@@ -20,6 +21,12 @@ class PagesController < ApplicationController
       #occurences = Query.where :lat => params[:lat], :lng => params[:lng], :with => {:geodist => 0.0..1_000.0}
 
       @occurences = Transaction.all
+
+      # on créé les markers pour la map
+      @hash = Gmaps4rails.build_markers(@occurences) do |trs, marker|
+        marker.lat trs.lat
+        marker.lng trs.lng
+      end
 
 
       # une fois les occurences récupérées, on enregistre la requete dans la table Query
