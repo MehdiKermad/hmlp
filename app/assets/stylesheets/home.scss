@@ -41,6 +41,15 @@
 
 .issue-text {
 	color: gray;
-	margin-top: 17px;
+	margin-top: 8px;
 	font-size: 12px;
+}
+
+.issue-circle {
+  margin-top: 20px;
+  background-color: #555;
+  height: 8px;
+  -moz-border-radius:75px;
+  -webkit-border-radius: 75px;
+  width: 8px;
 }
