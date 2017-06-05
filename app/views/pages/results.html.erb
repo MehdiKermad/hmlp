@@ -1,4 +1,5 @@
 <div id="resultsMainDiv" class="container-fluid">
+  </br>
   <div class="col-md-offset-2 col-md-8 text-center">
     
     <div class="panel panel-primary">
@@ -15,7 +16,7 @@
           <div class="col-md-6">
             <table class="table table-bordered col-md-6">
               <thead>
-                <tr>
+                <tr class="active">
                   <th>ID</th>
                   <th>Price</th>
                   <th>Area (m2)</th>
@@ -24,27 +25,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>ID</td>
-                  <td>Price</td>
-                  <td>Area (m2)</td>
-                  <td>Rooms</td>
-                  <td>Date</td>
-                </tr>
-                <tr>
-                  <td>ID</td>
-                  <td>Price</td>
-                  <td>Area (m2)</td>
-                  <td>Rooms</td>
-                  <td>Date</td>
-                </tr>
-                <tr>
-                  <td>ID</td>
-                  <td>Price</td>
-                  <td>Area (m2)</td>
-                  <td>Rooms</td>
-                  <td>Date</td>
-                </tr>
+                <% @occurences.each do |trs| %>
+                  <tr>
+                    <td><%= trs.id %></td>
+                    <td><%= trs.price %></td>
+                    <td><%= trs.area %></td>
+                    <td><%= trs.rooms %></td>
+                    <td><%= trs.date.to_date %></td>
+                  </tr>
+                <% end %>
               </tbody>
             </table>
           </div>
