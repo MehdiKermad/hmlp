@@ -1,3 +1,42 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.purple-hl {
+	background: #7094c8;
+	text-color: #FFF
+}
+
+.vertical-line {
+  border-left: solid 1px #555;
+  height: 50%
+}
+
+.custom-padding {
+	padding: 8px 0 8px 0;
+}
+
+.surround-text:after {
+    display: inline-block;
+    margin: 0 0 8px 20px;
+    height: 1px;
+    content: " ";
+    text-shadow: none;
+    background-color: #555;
+    width: 140px;
+}
+.surround-text:before {
+    display: inline-block;
+    margin: 0 20px 8px 0;
+    height: 1px;
+    content: " ";
+    text-shadow: none;
+    background-color: #555;
+    width: 140px;
+}
+
+.issue-text {
+	color: gray;
+	margin-top: 17px;
+	font-size: 12px;
+}
