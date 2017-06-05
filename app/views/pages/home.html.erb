@@ -20,11 +20,14 @@
             <input id="latInput" type="hidden" name="lat" value="0"/>
             <input id="lngInput" type="hidden" name="lng" value="0"/>
             <div class="input-group">
-              <input name="email" type="text" class="form-control">
-              <div class="input-group-addon">@homeloop.fr</div>
+              <input name="email" type="text" class="form-control text-right" placeholder="@homeloop.fr">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">
+                  <span class="glyphicon glyphicon-map-marker">Find
+                </button>
+               </span>
             </div>
           </div>
-          <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-map-marker">Find</button>
         <% end %>
 
         <div class="row custom-padding">
