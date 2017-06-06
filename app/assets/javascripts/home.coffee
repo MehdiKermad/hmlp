@@ -31,3 +31,10 @@ $(document).ready ->
           console.log("An unknown error occurred.")
         
     getLocation()
+
+    # on désactive les séparateur si le device est trop petit
+    if(screen.width < 1000)
+      $("#blockText2").removeClass("vertical-line")
+
+    if(screen.width < 720)
+      $("#infoText1").removeClass("surround-text")

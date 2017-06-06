@@ -13,3 +13,8 @@ $(document).ready ->
       handler.map.centerOn([$("#currentLat").text(), $("#currentLng").text()]); 
       handler.getMap().setZoom(16);
     );
+
+    # on désactive le séparateur si le device est trop petit
+
+    if(screen.width < 720)
+      $("#infoText1").removeClass("surround-text")

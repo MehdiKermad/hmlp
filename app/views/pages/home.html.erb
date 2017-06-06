@@ -5,12 +5,12 @@
     <div class="panel panel-primary">
 
       <div class="panel-heading">
-        <%= image_tag("logo.png", :alt => "Homeloop") %>
+        <%= image_tag("logo.png", :alt => "Homeloop", :class => "img-responsive center-block") %>
       </div>
 
       <div class="panel-default container-fluid">
       
-        <h4 class="surround-text custom-padding">Find previous transactions next to you</h4>
+        <h4 id="infoText1" class="surround-text custom-padding">Find previous transactions next to you</h4>
 
         <p id="geoInfo" style="display:none;"></p>
 
@@ -31,12 +31,12 @@
         <% end %>
 
         <div class="row custom-padding">
-          <div class="col-md-6 text-right">
+          <div id="blockText1" class="col-md-6 text-right">
             <h4>A beautiful tool ...</h4>
             <p style="color:gray">This tool is offered to you by the tech team.</p>
             <p style="color:gray">We really love you, therefore we made it extremelly simple to use. Or at least we hope it is. We do really expect you to provide us a feedback on this tool. And here I would continue with the explanation</p>
           </div>
-          <div class="col-md-6 text-left vertical-line">
+          <div id="blockText2" class="col-md-6 text-left vertical-line">
             <h4>... for a wonderful team</h4>
             <p style="color:gray">Actually, the only ones who are reading this are candidates for a developer job at Homeloop.</p>
             <p style="color:gray"> I sincerelly wish you good luck, this company is amazing, I strongly believe it is the future of real estate. And if you are reading this, it means that you want to be part of this adventure.</p>
