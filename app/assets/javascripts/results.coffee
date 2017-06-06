@@ -9,4 +9,7 @@ $(document).ready ->
       markers = handler.addMarkers(eval($("#markersList").text()))
       handler.bounds.extendWith(markers)
       handler.fitMapToBounds()
+
+      handler.map.centerOn([$("#currentLat").text(), $("#currentLng").text()]); 
+      handler.getMap().setZoom(16);
     );

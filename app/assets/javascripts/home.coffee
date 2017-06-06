@@ -6,27 +6,28 @@ $(document).ready ->
 
   # on vérifie que l'on est dans la bonne page
   if $("#homeMainDiv").length>0
-    x = $("#geoInfo");
 
     getLocation = ->
       if navigator.geolocation
         navigator.geolocation.getCurrentPosition(showPosition, showError);
       else
-        x.html("Geolocation is not supported by this browser.");
+        console.log("Geolocation is not supported by this browser.");
 
     showPosition = (position) ->
       $("#latInput").val(position.coords.latitude)
       $("#lngInput").val(position.coords.longitude)
+      console.log("position.coords.latitude");
+      console.log("position.coords.longitude");
 
     showError = (error) ->
       switch error.code
         when error.PERMISSION_DENIED
-          x.html("User denied the request for Geolocation.")
+          console.log("User denied the request for Geolocation.")
         when error.POSITION_UNAVAILABLE
-          x.html("Location information is unavailable.")
+          console.log("Location information is unavailable.")
         when error.TIMEOUT
-          x.html("The request to get user location timed out.")
+          console.log("The request to get user location timed out.")
         when error.UNKNOWN_ERROR
-          x.html("An unknown error occurred.")
+          console.log("An unknown error occurred.")
         
     getLocation()
